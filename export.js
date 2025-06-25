@@ -499,6 +499,7 @@ else
 								fit: req.body.fit,
 								sheetsAcross: req.body.sheetsAcross,
 								sheetsDown: req.body.sheetsDown,
+								shadows: req.body.shadows,
 								crop: req.body.crop,
 								border: req.body.border,
 								bg: req.body.bg,
