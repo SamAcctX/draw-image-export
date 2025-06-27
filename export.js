@@ -512,6 +512,23 @@ else
 								pageMargin: req.body.pageMargin
 							};
 							
+							if (req.body.filename != null && req.body.filename != '')
+							{
+								var filename = decodeURIComponent(req.body.filename);
+
+								if (filename.substring(filename.length - 4) == '.pdf')
+								{
+									filename = filename.substring(0, filename.length - 4);
+								}
+
+								if (filename.substring(filename.length - 7) == '.drawio')
+								{
+									filename = filename.substring(0, filename.length - 7);
+								}
+
+								arg.fileTitle = filename;
+							}
+
 							await page.evaluate((arg) => {
 								return render(arg);
 							}, arg);
