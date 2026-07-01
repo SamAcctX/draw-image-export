@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node export.js",
     "devstart": "nodemon export.js",
+    "postinstall": "node scripts/check-chrome.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=24.18.0 <25"
   },
   "author": "",
   "license": "ISC",
